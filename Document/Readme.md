@@ -22,4 +22,4 @@ This document will help you go through the assignment using screenshot for bette
 
  4. Upload Assignment
     Here you can upload an assignment. Without correct Username and Admin name the assignment will not get submitted(will throw an error). And you will be directed to home page showing you assignment with current status as 'Pending'. The status update once the 'ADMIN' will 'Accept' or 'Reject' your assignment.
-    ![alt text](<Screenshot 2024-12-04 at 5.18.49 PM.png>)![alt text](<Screenshot 2024-12-04 at 5.19.00 PM.png>)
+    ![alt-text-1](<Screenshot 2024-12-04 at 5.18.49 PM.png>)![alt-text-2](<Screenshot 2024-12-04 at 5.19.00 PM.png>)
