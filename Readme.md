@@ -1,6 +1,8 @@
 # VRV Security
 ## Backend Developer Intern Assignment
 
+#### Note: 
+- You can refer also Document/Readme.md for understanding the assignment.
 
 #### Installation 
 
