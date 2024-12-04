@@ -12,7 +12,7 @@ git clone git@github.com:Swapnil-2502/VRV-Security-Backend-Assignment.git
 ```bash
 npm install
 OR
-npm install express nodemon jwtwebtoken cookie-parser
+npm install express nodemon jwtwebtoken cookie-parser mongoose
 ```
 - Make a Database at your local MongoDB Compass give a Database Name and Cluster Name as users. Replace '/VRVSecurity' with the name of your Database and you will be connected to MongoDB.
 ```bash
