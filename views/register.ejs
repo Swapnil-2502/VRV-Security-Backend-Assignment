@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <title>Register</title>
+</head>
+<body>
+   <%- include('./partials/nav') %>
+   <h2>Backend Developer Intern Assignment</h2>
+    <div class="container mt-5">
+        <form action="/user/register" method="post">
+            <div class="mb-3">
+                <label for="Username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="Username" name="Username" placeholder="Enter you Username">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter you Email">
+              </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Enter you Password">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="isAdmin" name="role" value="ADMIN">
+              <label class="form-check-label" for="isAdmin">Register as Admin</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+    <%- include('./partials/scripts') %>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <title>Homepage</title>
+</head>
+<body>
+   <%- include('./partials/nav') %>
+    <h2>Backend Developer Intern Assignment</h2>
+    
+    <% if (locals.user.role == 'USER') { %>
+        <div class="conatiner mt-5">
+            <div class="d-flex flex-column align-items-center ">
+                <div class="row row-cols-2 gap-5">
+                    <% assignments.forEach(assignment => { %>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= assignment.Username%></h5>
+                                <p class="card-text"><%= JSON.stringify(assignment.task).substring(0, 50) %>...</p>
+                                <h5 class="card-title"><%= assignment.Adminname %></h5>
+                                <p class="card-title">Status:- <%= assignment.status %></p>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+               
+            </div>
+        </div>
+    <% } %>
+
+   
+
+    <%- include('./partials/scripts') %>
+</body>
+</html>

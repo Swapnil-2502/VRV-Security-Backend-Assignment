@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <title>Assignments</title>
+</head>
+<body>
+   <%- include('./partials/nav') %>
+    <h1>All Assignments</h1>
+    <% if (locals.user.role == 'ADMIN') { %>
+        <div class="conatiner mt-5">
+            <div class="d-flex flex-column align-items-center ">
+                <div class="row row-cols-2 gap-5">
+                    <% assignments.forEach(assignment => { %>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= assignment.Username%></h5>
+                                <p class="card-text"><%= JSON.stringify(assignment.task).substring(0, 50) %>...</p>
+                                <h5 class="card-title"><%= assignment.Adminname %></h5>
+                                <p class="card-title">Status:- <%= assignment.status %></p>
+                                <form action="<%= assignment._id %>/accept" method="POST" class="d-inline">
+                                    <button type="submit" class="btn btn-success">Accept</button>
+                                </form>
+                                <form action="<%= assignment._id %>/reject" method="POST" class="d-inline">
+                                    <button type="submit" class="btn btn-danger">Reject</button>
+                                </form>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+               
+            </div>
+        </div>
+    <% } %>
+
+   
+
+    <%- include('./partials/scripts') %>
+</body>
+</html>
